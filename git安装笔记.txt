@@ -1,0 +1,23 @@
+﻿windows中git的使用:
+1、下载git base (https://gitforwindows.org/)
+2、安装git bash 
+   常用命令:
+   ls -- 目录的内容
+   touch 创建一个文件
+   cd    进入一个目录
+   mkdir 创建目录
+3、初始化本地库 git init
+4、设置git
+   git config --global user.name "git账号"
+   git config --global user.email "email账号"
+5、设置SSH
+   ssh-keygen -t rsa -C "git账号"，找到C:\Users\Administrator\.ssh   \id_rsa.pub公钥添加到github的账号的settings关联即可
+
+5、将本地仓库和远程仓库关联
+   git remote add origin git仓库地址
+6、touch 创建一个文件
+   git add 添加文件到暂存区
+   git commit -m "注释" 提交到本地仓库
+   git push origin master (推送到远程仓库)
+7、出现推送失败 failed to push some refs to 'git仓库'
+   git pull --rebase origin master(有相同文件需要合并后提交)
